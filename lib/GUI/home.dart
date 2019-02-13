@@ -21,23 +21,41 @@ class _FirstState extends State<Home> {
         primary: false,
         slivers: <Widget>[
           SliverPadding(
-            padding: const EdgeInsets.all(40.0),
+            padding: const EdgeInsets.all(50.0),
             sliver: SliverGrid.count(
               crossAxisSpacing: 0.0,
               crossAxisCount: 2,
               children: <Widget>[
-                IconButton(
-                  icon: new Image.asset('img/college/col_edu.png'),
+            Card(
+            color: Colors.black38,
+              child:IconButton(
+            //icon: new Image.asset('img/college/uni_require.png'),
+            icon: new Image.asset('img/college/col_edu.png'),
+                  //iconSize: 10.0,
                   onPressed: () {Navigator.of(context).pushNamed('/sub');},
-                ),
+              )),
                 IconButton(
-                  icon: new Image.asset('img/college/col_low.png'),
+                  icon: new Image.asset('img/test.png'),
+                  //icon: new Image.asset('img/college/col_low.png'),
                   onPressed: null,
                 ),
-                IconButton(
-                  icon: new Image.asset('img/college/col_sic.png'),
-                  onPressed: null,
-                ),
+            Card(
+                color: Colors.black38,
+                child:IconButton(
+                  //icon: new Image.asset('img/college/uni_require.png'),
+                  icon: new Image.asset('img/college/phama.png'),
+                  //iconSize: 10.0,
+                  //onPressed: () {Navigator.of(context).pushNamed('/sub');},
+                )),
+
+            Card(
+                color: Colors.black38,
+                child:IconButton(
+                  //icon: new Image.asset('img/college/uni_require.png'),
+                  icon: new Image.asset('img/college/agr/Col_Agr.png'),
+                  //iconSize: 10.0,
+                  onPressed: () {Navigator.of(context).pushNamed('/subAgr');},
+                )),
                 IconButton(
                   icon: new Image.asset('img/college/col_mid.png'),
                   onPressed: null,
@@ -65,7 +83,6 @@ class _FirstState extends State<Home> {
         ],
       )
       // This trailing comma makes auto-formatting nicer for build methods.
-
     );
   }
 }

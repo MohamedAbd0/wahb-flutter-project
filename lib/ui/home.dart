@@ -75,9 +75,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ),
       body: new PageView(
         children: [
-          new Profile('الصفحة الشخصية '),
-          new Sale('السلة'),
           new Home(),
+          new Sale('السلة'),
+          new Profile('الصفحة الشخصية '),
           new Add('اضافة'),
           new Msg('الرسائل'),
         ],
@@ -94,11 +94,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
           items: [
             new BottomNavigationBarItem(
                 icon: new Icon(
-                  Icons.assignment_ind,
+                  Icons.home,
                   color: const Color(0xF0000000),
                 ),
                 title: new Text(
-                  "الشخصي",
+                  "الرئسية",
                   style: new TextStyle(
                     color: const Color(0xF0000000),
                   ),
@@ -116,11 +116,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 )),
             new BottomNavigationBarItem(
                 icon: new Icon(
-                  Icons.home,
+                  Icons.assignment_ind,
                   color: const Color(0xF0000000),
                 ),
                 title: new Text(
-                  "الرئسية",
+                  "الشخصي",
                   style: new TextStyle(
                     color: const Color(0xF0000000),
                   ),
