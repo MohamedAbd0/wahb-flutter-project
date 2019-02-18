@@ -107,17 +107,17 @@ class _SiginupState extends State<Siginup>
         barrierDismissible: false, // user must tap button!
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('تنبيه '),
+            title: Text('تنبيه ' ,textDirection: TextDirection.rtl,textAlign: TextAlign.center,style: TextStyle(fontSize: 25.0,color: Colors.red),),
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[
-                  Text(Msg),
+                  Text(Msg ,textDirection: TextDirection.rtl,),
                 ],
               ),
             ),
             actions: <Widget>[
-              FlatButton(
-                child: Text('حسنا'),
+              FlatButton(color: Colors.amber,
+                child: Text('حسنا' ,textDirection: TextDirection.ltr,style: TextStyle(color: Colors.black,fontSize: 15.0),),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -139,12 +139,12 @@ class _SiginupState extends State<Siginup>
       var db = new DatabaseHelper(); // لاستخدام دول تخزين البيانات
 
       if(password == '' || userName == '' || ConPassword == '' || email == ''){ // للتاكيد من ادخال كل القيم
-        _neverSatisfied('من فضلك اكمل البيانات بشكل صحيح');
+        _neverSatisfied('الرجاء إكمال البيانات');
       }else if(password != ConPassword){// لتاكيد تطابق الرقم السري
-        _neverSatisfied('من فضلك اكمل البيانات بشكل صحيح الرقم السري غير متطابقان اعد المحاوله ');  // طبع رساله
+        _neverSatisfied('الرقم السري غير متطابقان اعد المحاوله ');  // طبع رساله
 
       }else if((await db.getUserByUserName(userName)) != null){ // لعدم تكرار تخزين اسم المستخدم
-        _neverSatisfied('من فضلك اسم المستخدم غير متاح من فضلك ادخل اسم اخر ');  // طبع رساله
+        _neverSatisfied('هذا الاسم مستخدم من قبل');  // طبع رساله
 
       }else{ // تخزين البيانات
         await db.saveUser(new User(userName , password , email));
@@ -331,6 +331,7 @@ class _SiginupState extends State<Siginup>
 
 
                         //  ---------------------   تاكيد  الرقم السري    --------------
+
                         Card(
                           elevation: 2.0,
                           color: Colors.white,
@@ -350,13 +351,14 @@ class _SiginupState extends State<Siginup>
                                       top: 1.0, bottom: 1.0, left: 5.0, right: 5.0),
                                   child: TextField(
                                     controller: ConPasswordController,
+                                    obscureText: _obscureText,
                                     style: TextStyle(
                                         fontFamily: "WorkSansSemiBold",
                                         fontSize: 16.0,
                                         color: Colors.black),
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      hintText: "تأكيد الرقم المرور ",
+                                      hintText: "تأكيد الرقم المرور",
                                       hintStyle: TextStyle(
                                           fontFamily: "WorkSansSemiBold", fontSize: 18.0),
                                       suffixIcon: GestureDetector(

@@ -58,17 +58,18 @@ class _LoginPageState extends State<LoginPage>
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('تنبيه '),
+          title: Text('تنبيه ',textDirection: TextDirection.rtl,textAlign: TextAlign.center,style: TextStyle(color: Colors.red,fontSize: 25.0),),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(Msg),
+                Text(Msg,textDirection: TextDirection.rtl,),
               ],
             ),
           ),
           actions: <Widget>[
             FlatButton(
-              child: Text('حسنا'),
+              color: Colors.amber,
+              child: Text('حسنا',textDirection: TextDirection.ltr,style: TextStyle(color: Colors.black,fontSize: 15.0),),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -176,6 +177,10 @@ class _LoginPageState extends State<LoginPage>
                       children: <Widget>[
 
                         logo,
+                        SizedBox(
+                          height: 30.0,
+                          width: 50.0,
+                        ),
                     Opacity(
                       opacity: 0.70,
                       child:Card(
@@ -229,7 +234,9 @@ class _LoginPageState extends State<LoginPage>
                     ),
 
                         //----------------------    الرقم السري    -----------------------
-                        Card(
+                        Opacity(
+                          opacity: 0.70,
+                          child: Card(
                           elevation: 2.0,
                           color: Colors.white,
                           shape: RoundedRectangleBorder(
@@ -275,6 +282,7 @@ class _LoginPageState extends State<LoginPage>
                               ],
                             ),
                           ),
+                        ),
                         ),
 
                         //  --------------------------   تسجيل الدخول  ---------------

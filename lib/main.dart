@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Navigation main',
       routes: <String , WidgetBuilder>{
         '/Home': (BuildContext  context) => new Home(),
         '/Login': (BuildContext  context) => new LoginPage(),
@@ -27,6 +26,18 @@ class MyApp extends StatelessWidget{
         '/visitor': (BuildContext  context) => new VisitorPage(),
 
         '/subAgr': (BuildContext  context) => new Sub(title: 'علوم زراعية'),
+        '/subArts': (BuildContext  context) => new Sub(title: 'الأداب'),
+        '/subEdu': (BuildContext  context) => new Sub(title: 'التربية'),
+        '/subFcis': (BuildContext  context) => new Sub(title: 'الحاسب وتقنية المعلومات'),
+        '/subMan': (BuildContext  context) => new Sub(title: 'ادارة أعمال'),
+        '/subMid': (BuildContext  context) => new Sub(title: 'الطب'),
+        '/subAsnan': (BuildContext  context) => new Sub(title: 'طب الأسنان'),
+        '/subPhamr': (BuildContext  context) => new Sub(title: 'الصيدلة'),
+        '/subBitary': (BuildContext  context) => new Sub(title: 'طب البيطري'),
+        '/subLow': (BuildContext  context) => new Sub(title: 'الحقوق'),
+        '/subEng': (BuildContext  context) => new Sub(title: 'الهندسة'),
+        '/subSic': (BuildContext  context) => new Sub(title: 'العلوم'),
+
 
       },
       theme: new ThemeData(

@@ -54,7 +54,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
         title: new Text(
           widget.title,
-          style: new TextStyle(color: const Color(0xFFFFFFFF)),
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.center,
+          style: new TextStyle(color: Colors.white,fontSize: 20.0),
         ),
         actions: <Widget>[
           IconButton(

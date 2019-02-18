@@ -43,27 +43,53 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   assets:
-    - img/college/col_agr.png
-    - img/college/col_com.png
-    - img/college/col_edu.png
-    - img/college/col_low.png
-    - img/college/col_mid.png
-    - img/college/col_pha.png
-    - img/college/col_sic.png
-    - img/college/uni_require.png
-    - img/college/edu/sub_kg.png
-    - img/college/edu/sub_paint.png
-    - img/college/edu/sub_pub.png
-    - img/college/edu/sub_tich.png
     - img/StorePic.png
     - img/logo.png
-    - img/test.png
-    - img/college/ColRequirement.png
-    - img/college/uni_require.png
     - img/college/phama.png
     - img/college/agr/Col_Agr.png
     - img/college/agr/foods.png
     - img/college/agr/science.png
+    - img/college/arts/arabic.png
+    - img/college/arts/col_media.png
+    - img/college/arts/english.png
+    - img/college/arts/gegraphe.png
+    - img/college/arts/history.png
+    - img/college/arts/islamec tich.png
+    - img/college/arts/islamic.png
+    - img/college/arts/torisem.png
+    - img/college/edu/col_eduocation.png
+    - img/college/edu/arts.png
+    - img/college/edu/kg.png
+    - img/college/edu/learnningTech.png
+    - img/college/edu/sport.png
+    - img/college/edu/public.png
+    - img/college/fcis/col_fcis.png
+    - img/college/fcis/it.png
+    - img/college/fcis/programming.png
+    - img/college/mangement/col_bisMangemint.png
+    - img/college/mangement/finnanc.png
+    - img/college/mangement/hR.png
+    - img/college/mangement/math.png
+    - img/college/mid/mid.png
+    - img/college/mid/pubMid.png
+    - img/college/collogeRqurement.png
+    - img/college/UniversityRquiremint.png
+    - img/college/master.png
+    - img/college/donate.png
+    - img/college/col_asnan.png
+    - img/college/col_betary.png
+    - img/college/col_low.png
+    - img/college/eng/col_eng.png
+    - img/college/eng/bio.png
+    - img/college/eng/chemistry.png
+    - img/college/eng/citys.png
+    - img/college/eng/electric.png
+    - img/college/eng/micanics.png
+    - img/college/sic/bio.png
+    - img/college/sic/chan.png
+    - img/college/sic/math.png
+    - img/college/sic/phy.png
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
